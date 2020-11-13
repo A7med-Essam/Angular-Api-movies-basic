@@ -1,0 +1,13 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 my-4 text-center" *ngFor="let movie of movies">
+                <a [routerLink]="['/moviesDetails', 'movie' , movie.id]">
+                    <img [src]="imgPath+movie.poster_path" class="img-fluid">
+                    <h5 class="text-white pt-3">{{movie.title}}</h5>
+                    <h6 class="rate">{{movie.vote_average}}</h6>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

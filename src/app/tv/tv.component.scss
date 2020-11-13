@@ -1,0 +1,26 @@
+section {
+    width                : 100%;
+    height               : 100%;
+    background-image     : url(../../assets/images/dotted.png);
+    background-color     : rgba($color: #000000, $alpha: 0.9);
+    background-blend-mode: overlay;
+    background-repeat    : repeat;
+}
+
+
+.col-md-3 {
+    img {
+        position: relative;
+    }
+}
+
+.rate {
+    background-color: #09c;
+    color           : white;
+    position        : absolute;
+    top             : 0;
+    right           : 0px;
+    width           : 30px;
+    padding         : 5px;
+    transform       : translateX(-50%);
+}

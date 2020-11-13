@@ -1,0 +1,75 @@
+<section>
+
+    <div class="reg d-flex justify-content-center align-items-center text-white py-5">
+        <i class="fas fa-user-edit fa-2x mr-3 "></i>
+        <h1 class="pt-1">REGISTER HERE</h1>
+    </div>
+
+    <form [formGroup]="RegForm" (ngSubmit)="regSubmit(RegForm)" class="pb-5">
+
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="form">
+
+                <div class="form-group">
+                    <input type="text" placeholder="Enter your first name" formControlName="first_name"
+                        class="form-control"
+                        [class.is-valid]="RegForm.get('first_name').errors == null && RegForm.get('first_name').touched"
+                        [class.is-invalid]="RegForm.get('first_name').errors != null && RegForm.get('first_name').touched">
+                    <p class="text-danger py-2"
+                        *ngIf="RegForm.get('first_name').errors != null && RegForm.get('first_name').touched">First name
+                        is inValid</p>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" placeholder="Enter your last name" formControlName="last_name"
+                        class="form-control"
+                        [class.is-valid]="RegForm.get('last_name').errors == null && RegForm.get('last_name').touched"
+                        [class.is-invalid]="RegForm.get('last_name').errors != null && RegForm.get('last_name').touched">
+                    <p class="text-danger py-2"
+                        *ngIf="RegForm.get('last_name').errors != null && RegForm.get('last_name').touched">Last name is
+                        inValid</p>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" placeholder="Email" formControlName="email" class="form-control"
+                        [class.is-valid]="RegForm.get('email').errors == null && RegForm.get('email').touched"
+                        [class.is-invalid]="RegForm.get('email').errors != null && RegForm.get('email').touched">
+                    <p class="text-danger py-2"
+                        *ngIf="RegForm.get('email').errors != null && RegForm.get('email').touched">email is inValid</p>
+
+                </div>
+
+                <div class="form-group">
+                    <input type="password" placeholder="Password" formControlName="password" class="form-control"
+                        [class.is-valid]="RegForm.get('password').errors == null && RegForm.get('password').touched"
+                        [class.is-invalid]="RegForm.get('password').errors != null && RegForm.get('password').touched">
+                    <p class="text-danger py-2"
+                        *ngIf="RegForm.get('password').errors != null && RegForm.get('password').touched">Your password
+                        must starts with a capital letter</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center py-3">
+            <input type="checkbox" id="cbx" style="display: none;">
+            <label for="cbx" class="check">
+                <svg width="14px" height="14px" viewBox="0 0 18 18">
+                    <path
+                        d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z">
+                    </path>
+                    <polyline points="1 9 7 14 15 4"></polyline>
+                </svg>
+            </label>
+            <span class="text-white ml-2">I agree to the <a href="#" class="text-white"> Terms and conditions</a></span>
+        </div>
+
+        <div class="text-center">
+            <button class="btn bg-mine w-mine" [disabled]='RegForm.invalid' type="submit">Register</button>
+            <div class="alert alert-danger w-50 mx-auto my-4" *ngIf="flag">Email is already used, please enter another
+                email.</div>
+        </div>
+
+    </form>
+
+</section>

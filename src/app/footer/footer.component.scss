@@ -1,0 +1,29 @@
+.icons i {
+  padding      : 10px;
+  color        : white;
+  border       : solid 1px white;
+  width        : 40px;
+  height       : 40px;
+  margin       : 0px 5px;
+  border-radius: 2px;
+  cursor       : pointer;
+  transition   : background-color 0.4s ease-in-out, border 0.4s ease-in-out;
+}
+
+.icons i:hover {
+  background-color: #CA173B;
+  border          : #CA173B 1px solid;
+}
+
+#copyRight a {
+  text-decoration: none;
+  color          : #CA173B;
+}
+
+.bg-mine {
+  background-color: rgb(26, 26, 26);
+}
+
+.bg-mine2 {
+  background-color: #2C2C2C;
+}

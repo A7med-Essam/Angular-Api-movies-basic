@@ -1,0 +1,49 @@
+<section>
+    <div class="login-form mx-auto">
+        <div class="login-logo py-5 d-flex justify-content-center align-items-center ">
+            <i class="far fa-user fa-7x text-white "></i>
+        </div>
+
+
+        <form [formGroup]="loginForm" (ngSubmit)="loginSubmit(loginForm)" class="pb-5">
+            <div class="border d-flex justify-content-center align-items-center rounded-lg my-4">
+                <i class="far fa-user px-3 text-white"></i>
+                <input type="text" placeholder="USER EMAIL" class="form-control" formControlName="email"
+                    [class.is-invalid]="flag">
+            </div>
+
+            <div class="border d-flex justify-content-center align-items-center rounded-lg my-4">
+                <i class="fas fa-lock px-3 text-white"></i>
+                <input type="password" placeholder="PASSWORD" formControlName="password" class="form-control"
+                    [class.is-invalid]="flag">
+            </div>
+
+            <button type="submit" [disabled]='loginForm.invalid'
+                class="btn btn-mine btn-block text-white btn-outline-danger border-0">LOGIN</button>
+            <div class="alert alert-danger text-center mx-auto my-4" *ngIf="flag">{{FailedLogin}}</div>
+        </form>
+
+
+        <div class="row py-4">
+
+            <div class="col-6">
+                <input type="checkbox" id="cbx" style="display: none;">
+                <label for="cbx" class="check">
+                    <svg width="14px" height="14px" viewBox="0 0 18 18">
+                        <path
+                            d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z">
+                        </path>
+                        <polyline points="1 9 7 14 15 4"></polyline>
+                    </svg>
+                </label>
+                <span class="text-white ml-2">Remember me</span>
+            </div>
+
+            <div class="col-6">
+                <a href="#" class="text-muted font-italic">Forgot your password</a>
+            </div>
+
+        </div>
+        <hr class="bg-light">
+    </div>
+</section>

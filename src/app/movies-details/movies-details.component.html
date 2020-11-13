@@ -1,0 +1,18 @@
+<div class="container py-5">
+    <div class="row">
+
+        <div class="col-md-4">
+            <img [src]="imgPath + details.poster_path" class="img-fluid">
+        </div>
+
+        <div class="col-md-7 offset-md-1 lead text-muted">
+            <p>{{details.overview}}</p>
+            <div class=" py-4">
+                <p>Movie Name : <span class="font-weight-bold">{{details.original_title}}{{details.name}}</span></p>
+                <p>Category : <span class="text-primary ">{{details.genres[0].name}}</span> </p>
+                <p>Date : <span class="text-primary">{{details.release_date}} {{details.last_air_date}}</span></p>
+            </div>
+        </div>
+
+    </div>
+</div>

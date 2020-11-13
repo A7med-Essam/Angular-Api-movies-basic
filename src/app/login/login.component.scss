@@ -1,0 +1,52 @@
+$fontSize:18px;
+$color   :#ec4a65;
+
+section {
+
+  height: 100vh;
+
+  background: linear-gradient(#403A3E, #BE5869)
+}
+
+.login i {
+  font-size: $fontSize;
+}
+
+input {
+  padding         : .375rem .75rem;
+  color           : white !important;
+  background-color: transparent !important;
+  border          : none !important;
+  border-left     : white 1px solid !important;
+  border-radius   : 0px !important;
+  box-shadow      : none !important;
+}
+
+
+
+.btn-mine {
+  background-color: $color;
+}
+
+.check {
+  cursor: pointer;
+}
+
+.check svg {
+  fill  : none;
+  stroke: #c8ccd4;
+}
+
+.check svg polyline {
+  stroke-dasharray : 22;
+  stroke-dashoffset: 66;
+}
+
+#cbx:checked+.check svg polyline {
+  stroke-dashoffset: 42;
+  transition       : all 0.3s;
+}
+
+.login-form {
+  width: 350px;
+}

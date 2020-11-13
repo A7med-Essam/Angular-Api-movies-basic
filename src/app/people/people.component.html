@@ -1,0 +1,11 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 my-4 text-center" *ngFor="let movie of people">
+                <img [src]="imgPath+movie.profile_path" class="img-fluid">
+                <h5 class="text-white pt-3">{{movie.name}}</h5>
+                <h6 class="text-white">Best Movie : {{movie.known_for[0].title}}</h6>
+            </div>
+        </div>
+    </div>
+</section>
